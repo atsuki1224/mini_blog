@@ -1,0 +1,21 @@
+     <div class="content_post" style=back.jpg>
+        <% if user_signed_in? && current_user.id == lyric.user_id %>
+          <div class="more">
+            <span><%= image_tag 'arrow_top.png' %></span>
+            <ul class="more_list">
+              <li>
+                <%= link_to '編集', "/lyrics/#{lyric.id}/edit", method: :get %>
+              </li>
+              <li>
+                <%= link_to '削除', "/lyrics/#{lyric.id}", method: :delete %>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+          <%= simple_format(lyric.text)%>
+        <span class="name">
+          <a href="">
+            <span>投稿者</span><%= lyric.user.nickname %>
+          </a>
+          </span>
+      </div>

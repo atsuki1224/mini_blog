@@ -1,0 +1,6 @@
+<div class="contents row">
+    <% @lyrics.each do |lyric| %>
+      <%= render partial: "lyric", locals: { lyric: lyric } %>
+    <% end %>
+  <%= paginate(@lyrics) %>
+</div>

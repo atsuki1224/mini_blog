@@ -1,0 +1,11 @@
+<div class="contents row">
+  <div class="container">
+    <%= form_for @lyric do |form| %>
+      <h3>
+        投稿する
+      </h3>
+      <%= form.text_area :text, placeholder: "text" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>
